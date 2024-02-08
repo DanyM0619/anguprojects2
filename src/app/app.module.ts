@@ -8,6 +8,7 @@ import { Pagina1Component } from './components/pagina1/pagina1.component';
 import { Pagina2Component } from './components/pagina2/pagina2.component';
 import { NavmenuComponent } from './components/navmenu/navmenu.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.co
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

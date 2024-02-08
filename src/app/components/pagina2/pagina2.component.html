@@ -1,1 +1,23 @@
-<h3>Mi contacto es: 3198657489</h3>
+
+<form [formGroup]="signupForm" (ngSubmit)="enviar(signupForm.value)" (submit)="onSubmit(signupForm.value)">
+
+    <label>Nombre:</label>
+    <input formControlName="nombre" type="text" placeholder="Nombre">
+    <br>
+    <label>Usuario:</label>
+    <input formControlName="usuario" type="text" placeholder="Usuario">
+    <div *ngIf="signupForm.get('usuario')?.hasError('usuario') && signupForm.get('usuario')">
+    Campo de Usuario es requerido
+    </div>
+    <br>
+    <label>Email:</label>
+    <input formControlName="email" type="text" placeholder="Correo">
+    <div *ngIf="signupForm.get('email')?.hasError('email') && signupForm.get('email')?.touched">Es necesario introducir el email</div>
+    <br>
+    <label>Contraseña:</label>
+    <input formControlName="clave" type="password" placeholder="Contraseña">
+    <div *ngIf="signupForm.get('clave')?.hasError('clave') && signupForm.get('clave')">La contraseña es requerida</div>
+    <br>
+    <input type="submit" value="Iniciar Sesión" [disabled]="!signupForm.valid">
+
+</form>
