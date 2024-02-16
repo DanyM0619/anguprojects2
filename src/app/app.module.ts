@@ -9,6 +9,8 @@ import { Pagina2Component } from './components/pagina2/pagina2.component';
 import { NavmenuComponent } from './components/navmenu/navmenu.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { OneComponent } from './Injection/one/one.component';
+import { TwoComponent } from './Injection/two/two.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     Pagina1Component,
     Pagina2Component,
     NavmenuComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    OneComponent,
+    TwoComponent
   ],
   imports: [
     BrowserModule,
